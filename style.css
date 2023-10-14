@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+}
+
+/* re-size font-size of the entire page */
+html {
+    font-size: 62.5%;
+}
+body{
+    background-color: white;
+   background-image: url("SNS.png");
+   background-size: cover;
+   background-image: blur();
+   background-position: center;
+}
+h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: black;
+
+}
+.head{
+    color: #29ba2b;
+    font-style: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/* class to use flex-box in all document */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    
+    
+}
+   
+.logo{
+    width: 120px;
+    height: 70px;
+    margin-left: 20px;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.bn30 {
+    border: 5em;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    background-image: linear-gradient(45deg, #ff1111, #000000);
+    padding: 0.7em 2em;
+    border-radius: 65px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+    -webkit-transition: box-shadow 0.25s;
+    transition: box-shadow 0.25s;
+    color: black;
+    margin-right: 20px;
+    
+  }
+  
+  .bn30 .text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(45deg, #ff1111, #000000);
+  }
+  
+  .bn30:after {
+    content: "";
+    border-radius: 18px;
+    position: absolute;
+    margin: 4px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background: #ffef00;
+  }
+  
+  .bn30:hover {
+    background-image: linear-gradient(-45deg, #ff1111, #000000);
+    box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
+  }
+  
+  .bn30:hover .text {
+    background-image: linear-gradient(-45deg, #ff1111, #000000);
+  }
+
+
+/* style the element in heading */
+.heading {
+    font-size: 4rem;
+    color: black;
+    letter-spacing: 0.1rem;
+    font-weight: 200;
+}
+
+/* customaize the span */
+.heading span {
+    font-size: 4rem;
+    color: #efd81d;
+    transition: color 0.2s;
+}
+
+/* customize button */
+.btn {
+    width: 15rem;
+    height: 4rem;
+    background-color: #efd81d;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 0.1rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+/* customize the boxes */
+.boxes {
+    
+    width: 40%;
+    height: 100%;
+    perspective: 150rem;
+}
+
+
+/* connection with javascript */
+.active.box {
+    top: 0;
+    left: 0;
+    transition: all 0.5s;
+}
+
+
+
+.box {
+    transform-style: preserve-3d;
+   
+    transform: rotateY(45deg) rotateX(30deg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* Styling single boxes */
+.box-1 {
+    left: -20rem;
+    top: -0rem;
+    animation: boxAnim 100s infinite linear;
+}
+
+.box-2 {
+    left: -5rem;
+    top: -23rem;
+    animation: boxAnim 100s -10s infinite linear;
+}
+
+.box-3 {
+    left: 20rem;
+    top: -23rem;
+    right: 10rem;
+    animation: boxAnim 100s -20s infinite linear;
+}
+
+.box-4 {
+    left: 24rem;
+    top: -3rem;
+    right: 20rem;
+    bottom: 30rem;
+    animation: boxAnim 100s -30s infinite linear;
+}
+
+.box-5 {
+    left: 15rem;
+    top: 18rem;
+    bottom: 5rem;
+    right: 10rem;
+    animation: boxAnim 100s -40s infinite linear;
+}
+
+
+
+
+.active.box div {
+    width: 16rem;
+    height: 16rem;
+    transition: all 0.2s 0.5s ease-in-out;
+}
+
+
+/* general container of the boxes */
+.box div {
+    width: 7rem;
+    height: 7rem;
+    position: absolute;
+    opacity: 0.8;
+    box-shadow: 0.1rem 0.1rem 0.1rem #eee inset, -0.1rem -0.1rem 0.1rem #eee inset, 0.1rem 0.1rem 3.5rem rgba(255, 255, 255, 0.2), -0.1rem -0.1rem 3.5rem rgba(255, 255, 255, 0.2);
+
+}
+
+/* default rotation animation of boxes */
+@keyframes boxAnim {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+/* assignment of the single boxes */
+.box-1 div {
+    /* CLT */
+    background-color: #efd81d;
+}
+
+.box-2 div {
+    /* SCD */
+    background-color: #61dbfb;
+}
+
+.box-3 div {
+    /* CRC */
+    background-color: #41b883;
+}
+
+.box-4 div {
+    /* IIPC */
+    background-color: #b52e31;
+}
+
+.box-5 div {
+    /* SRI */
+    background-color: #43853d;
+}
+
+
+
+
+/* creation 3D effect */
+.top-side {
+    transform: rotateX(90deg) translateZ(3.5rem);
+}
+
+.bottom-side {
+    transform: rotateX(90deg) translateZ(-3.5rem);
+}
+
+.front-side {
+    transform: translateZ(3.5rem);
+}
+
+.back-side {
+    transform: translateZ(-3.5rem);
+
+}
+
+.right-side {
+    transform: rotateY(-90deg) translateX(3.5rem);
+    transform-origin: right;
+}
+
+.left-side {
+    transform: rotateY(90deg) translateX(-3.5rem);
+    transform-origin: left;
+}
+
+
+
+.active .top-side {
+    transform: rotateX(90deg) translateZ(8rem);
+}
+
+.active .bottom-side {
+    transform: rotateX(90deg) translateZ(-8rem);
+}
+
+.active .front-side {
+    transform: translateZ(8rem);
+}
+
+.active .back-side {
+    transform: translateZ(-8rem);
+
+}
+
+.active .right-side {
+    transform: rotateY(-90deg) translateX(8rem);
+    transform-origin: right;
+}
+
+.active .left-side {
+    transform: rotateY(90deg) translateX(-8rem);
+    transform-origin: left;
+}
