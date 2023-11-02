@@ -1,186 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SNS Student Portal</title>
-    <link rel="icon" href="assets/SNS.png" type="image/x-icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .portal {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .wrapper {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .title {
-            text-align: center;
-        }
-
-        .title h1 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .title p {
-            color: #555;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .field {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-
-        .input {
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .input input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .input label {
-            position: absolute;
-            top: -10px;
-            left: 10px;
-            transition: all 0.2s;
-            color: #333;
-            background-color: #ffffff;
-            padding: 0 5px;
-        }
-
-        .input input:focus+label {
-            top: -20px;
-            left: 10px;
-            font-size: 12px;
-        }
-
-        .input a {
-            color: #777;
-            font-size: 12px;
-            margin-top: 5px;
-            text-decoration: none;
-        }
-
-        .button {
-            text-align: center;
-        }
-
-        .button button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .button button:hover {
-            background-color: #555;
-        }
-
-        p {
-            color: #777;
-            font-size: 12px;
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link rel="stylesheet" href="loginpage.css">
+    <title>Student Portal</title>
 </head>
+
 <body>
-    <div class="portal">
-        <div class="wrapper">
-            <form action="#" class="form">
-                <div class="title">
-                    <h1><span>Student</span> Portal</h1>
-                    <p>Sign in to access your academic info and resources</p>
-                </div>
-                <div class="field">
-                    <div class="input">
-                        <input type="text" id="sn" placeholder="Register Number">
-                        <label for="sn">Student ID</label>
-                    </div>
-                    <div class="input">
-                        <input type="password" id="ac" placeholder="Password">
-                        <label for="ac">Password</label>
-                        <a href="#" id="fp">Forgot Password?</a>
-                    </div>
-                    <div class="input">
-                        <input type="text" id="cv" placeholder="Captcha">
-                        <label for="cv">Captcha</label>
-                    </div>
-                    <div class="button">
-                        <button>Sign in</button>
-                    </div>
-                    <p>By using this service, you understand and agree to the SNS College Online Services <a href="#">Terms of Use</a> and <a href="#">Privacy Statement</a>.</p>
-                </div>
-                <div class="title">
-                    <h2>Login As:</h2>
-                </div>
-                <div class="field">
-                    <label for="student">Student</label>
-                    <input type="radio" id="student" name="role" value="student" checked>
-                    <label for="teacher">Teacher</label>
-                    <input type="radio" id="teacher" name="role" value="teacher">
-                </div>
-            </form>
-        </div>
-    </div>
-    <script>
-        const studentLabel = document.querySelector("label[for='sn']");
-        const studentInput = document.getElementById("sn");
-        const studentRadio = document.getElementById("student");
-        const teacherRadio = document.getElementById("teacher");
-
-        teacherRadio.addEventListener("change", () => {
-            if (teacherRadio.checked) {
-                studentLabel.textContent = "Staff Mail";
-                studentInput.placeholder = "Staff Mail";
-            } else {
-                studentLabel.textContent = "Student ID";
-                studentInput.placeholder = "Register Number";
-            }
-        });
-
-        studentRadio.addEventListener("change", () => {
-            if (studentRadio.checked) {
-                studentLabel.textContent = "Student ID";
-                studentInput.placeholder = "Register Number";
-            } else {
-                studentLabel.textContent = "Staff Mail";
-                studentInput.placeholder = "Staff Mail";
-            }
-        });
-    </script>
+    <main>
+        <section class="left">
+            <div class="caption">
+                <img src="C:\Users\giri\OneDrive\Pictures\sns.jpg" class="image" alt="">
+                <h2>SNS College of Engineering<br><span>Student Portal</span></h2>
+                <p>SNS Student Portal is an online gateway where students can log in to access important program
+                    information. Student Portal contain information on courses, transcripts, timetables, exam schedules
+                    and department contact numbers.</p>
+                    
+                    
+            </div>
+        </section>
+        <section class="right">
+            <div class="logo">
+                <img src="C:\Users\giri\OneDrive\Pictures\sns.jpg" alt="">
+                <h2>Student <span>Portal</span></h2>
+            </div>
+           
+            <div class="form">
+                <form action="post">
+                    <h5>Login</h5>
+                    <input type="text" class="input-form" placeholder="Registration Number">
+                    <input type="password" class="input-form" placeholder="Pin Code">
+                    <input type="checkbox" id="check-btn">
+                    <button class="btn">Login</button>
+                </form>
+                <b>Can't log in or Forgot Password? Click <span class="bottom-link"><a href="#">here</a></span> to send your password.</b>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
+     
+                 
+      
